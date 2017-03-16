@@ -1,18 +1,30 @@
 const ingredients = {
   "tcy001":[
     {
-      "ingredent":"Prawns",
-      "ingredent":"Coconut milk",
-      "ingredent":"Lemongrass",
-      "ingredent":"Red chillis"
+      "ingredient":"Prawns",
+    },
+    {
+      "ingredient":"Coconut milk",
+    },
+    {
+      "ingredient":"Lemongrass",
+    },
+    {
+      "ingredient":"Red chillis"
     }
   ],
   "csp001":[
   {
-    "ingredent":"Chicken",
-    "ingredent":"Carrot",
-    "ingredent":"Chicken stock",
-    "ingredent":"Sweetcorn"
+    "ingredient":"Chicken",
+  },
+  {
+    "ingredient":"Carrot",
+  },
+  {
+    "ingredient":"Chicken stock",
+  },
+  {
+    "ingredient":"Sweetcorn"
   }
   ]
 };
