@@ -11,7 +11,7 @@ import store, { history } from './store';
 import css from './styles/style.styl';
 
 // Import Components
-import Main from './components/Main';
+import App from './components/App';
 import Recipe from './components/Recipe';
 import RecipeGrid from './components/RecipeGrid';
 
@@ -19,7 +19,7 @@ import RecipeGrid from './components/RecipeGrid';
 const router = (
   <Provider store={store}>  
     <Router history={history}>
-      <Route path="/" component={Main}>
+      <Route path="/" component={App}>
         <IndexRoute component={RecipeGrid}></IndexRoute>
         <Route path="/view/:postId" component={Recipe}></Route>
       </Route>
