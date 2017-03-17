@@ -6,6 +6,7 @@ class Ingredients extends React.Component {
 
     // bind helpers i.e. allows use of 'this' for custom methods
     this.renderIngredients = this.renderIngredients.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
@@ -19,6 +20,17 @@ class Ingredients extends React.Component {
         </p>
       </div>
     )
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log(e);
+    console.log(this.refs);
+
+    const { postId } = this.props.params;
+    const newIngredient = this.refs.newIngredient.value;
+    console.log(postId, newIngredient);
+    this.props.addIngredient(postId, newIngredient);
   }
  
   render() {
@@ -35,8 +47,8 @@ class Ingredients extends React.Component {
     return (
       <div className="comments">
         {recipes[i].ingredients.map(this.renderIngredients)}
-        <form ref="addIngredient" className="comment-form">
-          <input type="text" ref="ingredient" placeholder="Ingredient" />
+        <form ref="addIngredient" className="comment-form" onSubmit={this.handleSubmit}>
+          <input type="text" ref="newIngredient" placeholder="Ingredient" />
           <input type="submit" hidden />
         </form>
       </div>

@@ -7,11 +7,11 @@ export function increment(index) {
 }
 
 // add comment
-export function addIngredient(postId, ingredient) {
+export function addIngredient(postId, newIngredient) {
   return {
     type: 'add_ingredient',
     postId,
-    ingredient
+    newIngredient
   }
 }
 
