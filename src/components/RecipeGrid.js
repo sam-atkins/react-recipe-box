@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Photo from './Photo';
 
-class RecipeGrid extends Component {
+class RecipeGrid extends React.Component {
   render() {
     return (
-      <div className="default">I'm the recipe grid!!</div>
+      <div className="photo-grid">
+        {this.props.recipes.map((recipe, i) => <Photo {...this.props} key={i} i={i} recipe={recipe} /> )}
+      </div>
     )
   }
 }
