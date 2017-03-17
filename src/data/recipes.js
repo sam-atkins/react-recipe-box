@@ -4,14 +4,14 @@ const recipes = [
       "meal":"Thai curry",
       "description":"Beautify, yummy Thai curry",
       "likes":43,
-      "display_src":"#"
+      "display_src":"http://i65.tinypic.com/24vnvxc.jpg"
    },
    {
       "meal_code":"csp001",
       "meal":"Chicken Soup",
-      "description":"Feeling ill? This soup is ust what the doctor ordered!",
+      "description":"Feeling ill? This soup is just what the doctor ordered!",
       "likes":10,
-      "display_src":"#"
+      "display_src":"http://i64.tinypic.com/dekxgo.jpg"
    }
 ];
 
