@@ -9,12 +9,10 @@ const Main = React.createClass({
         <h1>
           <Link to="/">Recipe Box</Link>
         </h1>
-        {this.props.children}
+      {React.cloneElement(this.props.children, this.props)}
       </div>
       )
   }
 });
 
 export default Main;
-
-// {React.cloneElement(this.props.children, this.props)}
