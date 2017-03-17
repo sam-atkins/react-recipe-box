@@ -15,6 +15,7 @@ class Ingredients extends React.Component {
       <div className="comment" key={i}>
         <p>
           <strong>{ingredient}</strong>
+          <button className="remove-comment">&times;</button>
         </p>
       </div>
     )
@@ -28,12 +29,16 @@ class Ingredients extends React.Component {
 
     // find the index of the recipe
     const i = recipes.findIndex((recipe) => recipe.meal_code === this.props.params.postId);
-    console.log(`This is the recipe index = ${i}`);
+    // console.log(`This is the recipe index = ${i}`);
     
-    console.log(`These are the ingredients: ${recipes[i].ingredients}`);
+    // console.log(`These are the ingredients: ${recipes[i].ingredients}`);
     return (
       <div className="comments">
         {recipes[i].ingredients.map(this.renderIngredients)}
+        <form ref="addIngredient" className="comment-form">
+          <input type="text" ref="ingredient" placeholder="Ingredient" />
+          <input type="submit" hidden />
+        </form>
       </div>
     )
   }
